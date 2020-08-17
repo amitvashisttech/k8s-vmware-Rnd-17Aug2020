@@ -1,0 +1,168 @@
+    1  docker search mysql
+    2  docker images 
+    3  docker history busybox
+    4  docker history centos:7
+    5  docker images 
+    6  docker ps
+    7  docker ps -a 
+    8  docker run centos:7 echo "hey docker"
+    9  docker ps
+   10  docker ps -a 
+   11  docker run -it centos:7
+   12  docker ps
+   13  docker ps -a 
+   14  docker run -it ubuntu:16.04
+   15  docker ps
+   16  docker ps -a 
+   17  docker start eb53d6566ae9
+   18  docker ps 
+   19  docker attach eb53d6566ae9
+   20  docker ps 
+   21  docker run -it centos:7
+   22  docker ps 
+   23  docker stop da2750af40d4
+   24  docker kill 1e840e0fe808
+   25  docker start da2750af40d4
+   26  docker ps 
+   27  docker ps -a
+   28  docker ps -aq
+   29  docker ps -q
+   30  docker kill $(docker ps -q)
+   31  docker ps 
+   32  docker ps -a
+   33  docker ps -aq
+   34  docker rm $(docker ps -aq)
+   35  ls
+   36  docker run -it centos:7
+   37  docker ps 
+   38  docker inspect 9306980f34fd
+   39  ls
+   40  cd k8s-vmware-Rnd-17Aug2020/
+   41  kls
+   42  ls
+   43  cd 01-Docker/
+   44  ls
+   45  history > 03-Docker-Container-Commands.txt
+   46  cd ../
+   47  git add / git commit -m "03-Docker-Container-Commands.txt"; git push 
+   48  git add .; git commit -m "03-Docker-Container-Commands.txt"; git push 
+   49  ls
+   50  cd 01-Docker/
+   51  ls
+   52  cd 
+   53  ls
+   54  docker run -it ubuntu:16.04
+   55  docker ps 
+   56  docker inspect 875c659ceb9e
+   57  curl 172.17.0.3
+   58  curl 172.17.0.3/myinfo.html
+   59  docker attach 875c659ceb9e
+   60  ls
+   61  docker kill $(docker ps -qa)
+   62  docker rm $(docker ps -qa)
+   63  ls
+   64  cd k8s-vmware-Rnd-17Aug2020/
+   65  ls
+   66  cd 01-Docker/
+   67  ls
+   68  mkdir 04-DockerImages
+   69  ls
+   70  cd 04-DockerImages/
+   71  ls
+   72  mkdir apache
+   73  ls
+   74  cd apache/
+   75  ls
+   76  mkdir version1
+   77  ls
+   78  cd version1/
+   79  ls
+   80  vim Dockerfile
+   81  ls
+   82  docker build-t "amitvashist7/mypache:v1" .
+   83  docker build -t "amitvashist7/mypache:v1" .
+   84  docker images 
+   85  docker tag c5c2109ca183 amitvashist7/myapache:v1 
+   86  docker images 
+   87  docker rmi amitvashist7/mypache:v1
+   88  docker images 
+   89  docker run -d amitvashist7/myapache:v1
+   90  docker ps 
+   91  docker inspect fa0310d3791f
+   92  curl 172.17.0.2
+   93  ls
+   94  cd ..
+   95  ls
+   96  cd ..
+   97  ls
+   98  cd ..
+   99  ls
+  100  cd ..
+  101  ls
+  102  git add .; git commit -m "03-Docker-Container-Commands.txt"; git push 
+  103  history 
+  104  ls
+  105  cd 01-Docker/
+  106  ls
+  107  cd 04-DockerImages/
+  108  ls
+  109  cd apache/
+  110  ls
+  111  cp -rf version1 version2
+  112  ls
+  113  cd version2/
+  114  ls
+  115  vim Dockerfile 
+  116  ls
+  117  cat Dockerfile 
+  118  vim info.html
+  119  ls
+  120  mv Dockerfile myapache-file-v2
+  121  ls
+  122  docker build -t "amitvashist7/mypache:v2" .
+  123  ll
+  124  docker build -t "amitvashist7/mypache:v2" -f myapache-file-v2 .
+  125  docker images 
+  126  docker run -d amitvashist7/mypache:v2
+  127  docker ps 
+  128  docker inspect c2bf2e29e4ed
+  129  curl 172.17.0.3
+  130  curl 172.17.0.3:8080
+  131  curl 172.17.0.3/info.html
+  132  curl 172.17.0.3
+  133  curl localhost
+  134  docker ps 
+  135  netstat -tulnp
+  136  docker run -d -P amitvashist7/mypache:v2
+  137  docker ps 
+  138  docker kill 90d160e6fd96
+  139  docker ps 
+  140  netstat -tulnp
+  141  iptables -L
+  142  netstat -tulnp
+  143  docker ps 
+  144  ls
+  145  cd ...
+  146  cd ..
+  147  ls
+  148  cd ..
+  149  ls
+  150  git add .; git commit -m "03-Docker-Container-Commands.txt"; git push 
+  151  ls
+  152  history 
+  153  docker run -d -p 80:80 -p 8090:8080 --name myjob1 amitvashist7/mypache:v2
+  154  docker ps 
+  155  docker login 
+  156  docker pull amitvashist7/k8s-tiny-web:latest
+  157  docker tag amitvashist7/mypache:v2 myapache:v1
+  158  docker images 
+  159  docker push myapache:v1
+  160  docker tag amitvashist7/mypache:v2 amitvashist7/random-namecxcxc:v1
+  161  docker images 
+  162  docker push amitvashist7/random-namecxcxc:v1
+  163  docker tag amitvashist7/mypache:v2 amitvashist7/random-namecxcxc:latest
+  164  docker push amitvashist7/random-namecxcxc:latest
+  165  ls
+  166  cd 01-Docker/
+  167  ls
+  168  history > 05-Docker-Commands.txt
