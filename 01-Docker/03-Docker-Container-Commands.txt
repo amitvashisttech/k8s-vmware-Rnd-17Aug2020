@@ -1,0 +1,45 @@
+    1  docker search mysql
+    2  docker images 
+    3  docker history busybox
+    4  docker history centos:7
+    5  docker images 
+    6  docker ps
+    7  docker ps -a 
+    8  docker run centos:7 echo "hey docker"
+    9  docker ps
+   10  docker ps -a 
+   11  docker run -it centos:7
+   12  docker ps
+   13  docker ps -a 
+   14  docker run -it ubuntu:16.04
+   15  docker ps
+   16  docker ps -a 
+   17  docker start eb53d6566ae9
+   18  docker ps 
+   19  docker attach eb53d6566ae9
+   20  docker ps 
+   21  docker run -it centos:7
+   22  docker ps 
+   23  docker stop da2750af40d4
+   24  docker kill 1e840e0fe808
+   25  docker start da2750af40d4
+   26  docker ps 
+   27  docker ps -a
+   28  docker ps -aq
+   29  docker ps -q
+   30  docker kill $(docker ps -q)
+   31  docker ps 
+   32  docker ps -a
+   33  docker ps -aq
+   34  docker rm $(docker ps -aq)
+   35  ls
+   36  docker run -it centos:7
+   37  docker ps 
+   38  docker inspect 9306980f34fd
+   39  ls
+   40  cd k8s-vmware-Rnd-17Aug2020/
+   41  kls
+   42  ls
+   43  cd 01-Docker/
+   44  ls
+   45  history > 03-Docker-Container-Commands.txt
