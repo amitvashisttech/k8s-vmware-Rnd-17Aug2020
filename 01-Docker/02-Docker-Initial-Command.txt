@@ -1,0 +1,19 @@
+    1  docker images 
+    2  docker ps
+    3  docker run busybox echo "Hello World"
+    4  docker images 
+    5  docker run busybox echo Welcome to Docker"
+    6  docker run busybox echo "Welcome to Docker"
+    7  docker pull ubuntu:16.04
+    8  docker images
+    9  docker pull ubuntu
+   10  docker version 
+   11  ls
+   12  cd k8s-vmware-Rnd-17Aug2020/
+   13  ls
+   14  cd 01-Docker/
+   15  ls
+   16  cat 01-Docker-Installation.txt 
+   17  history 
+   18  ls
+   19  history > 02-Docker-Initial-Command.txt
