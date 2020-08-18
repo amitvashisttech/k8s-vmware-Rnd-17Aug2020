@@ -1,80 +1,56 @@
-    1  git clone https://github.com/amitvashisttech/k8s-vmware-Rnd-17Aug2020.git
-    2  ls
-    3  cd k8s-vmware-Rnd-17Aug2020/
-    4  ls
-    5  cd 02-K8s/
-    6  ls
-    7  cd 01-Setup/
-    8  ls
-    9  vi install-kubernetes.sh 
-   10  ip addr 
-   11  vi install-kubernetes.sh 
-   12  ls
-   13  vim install-kubernetes.sh 
-   14  ./install-kubernetes.sh 
-   15  mkdir -p $HOME/.kube;  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config; sudo chown $(id -u):$(id -g) $HOME/.kube/config
-   16  kubectl get nodes 
-   17  docker version 
-   18  docker ps 
-   19  kubectl get pods 
-   20  kubectl get pods -n kube-system
-   21  kubectl get pods 
-   22  kubectl get nodes 
+    1  ls
+    2  cd k8s-vmware-Rnd-17Aug2020/
+    3  ls
+    4  git pull 
+    5  ls
+    6  cd 02-K8s/
+    7  ls
+    8  cd 02-First-App/
+    9  ls
+   10  vim helloworld.yml 
+   11  ls
+   12  kubectl create -f helloworld.yml 
+   13  kubectl get pods 
+   14  kubectl delete -f helloworld.yml 
+   15  kubectl create -f helloworld.yml 
+   16  cat helloworld.yml 
+   17  ls
+   18  cd ..
+   19  ls
+   20  git pull 
+   21  ls
+   22  cd 03-Replication-controller/
    23  ls
-   24  kubectl get nodes 
-   25  watch -n .5 kubectl get nodes 
-   26  watch -n .1 kubectl get nodes 
-   27  kubectl get nodes 
-   28  kubectl cluster-info
-   29  kubectl versions
-   30  kubectl version
-   31  kubectl api-versions
-   32  kubectl api-resources
-   33  kubectl proxy --port=8080 &
-   34  netstat -tulnp | grep -i 8080
-   35  curl localhost
-   36  curl localhost:8080
-   37  curl localhost:8080/api
-   38  curl localhost:8080/api/v1
-   39  curl localhost:8080/api/v1/services/status
-   40  curl localhost:8080/api/v1/
-   41  curl localhost:8080/api/v1/pods
-   42  kubectl get pods 
-   43  kubectl get ns
-   44  kubectl get pods 
-   45  kubectl get pods -n kube-system
-   46  curl localhost:8080/api/v1/pods
-   47  kubectl get pods -n kube-system
-   48  curl localhost:8080/api/v1/pods | grep -i "etcd-ip-172-31-2-77"
-   49  kubectl config get-cluters
-   50  kubectl config get-cluter
-   51  kubectl config view
-   52  cd 
+   24  kubectl get pods 
+   25* kubectl del
+   26  kubectl get pods 
+   27  ls
+   28  cat helloworld-repl-controller.yml 
+   29  kubectl get rc 
+   30  kubectl get pods 
+   31  kubectl create -f helloworld-repl-controller.yml 
+   32  kubectl get rc 
+   33  kubectl get pods 
+   34  kubectl get rc 
+   35  kubectl scale --replicas=10 rc helloworld-controller
+   36  kubectl get pods 
+   37  kubectl get pods -o wide 
+   38  kubectl scale --replicas=1 rc helloworld-controller
+   39  kubectl get pods -o wide 
+   40  kubectl delete pod helloworld-controller-9w8sl
+   41  kubectl get pods -o wide 
+   42  kubectl scale --replicas=2 rc helloworld-controller
+   43  kubectl get pods -o wide 
+   44  kubectl delete helloworld-controller-84p9l helloworld-controller-x5rvt
+   45  kubectl delete pod helloworld-controller-84p9l helloworld-controller-x5rvt
+   46  kubectl get pods -o wide 
+   47  kubectl get rc -n kube-system
+   48  kubectl get rs  -n kube-system
+   49  kubectl scale --replicas=10 rc helloworld-controller
+   50  kubectl get pods -o wide 
+   51  kubectl scale --replicas=1 rc helloworld-controller
+   52  kubectl get pods -o wide 
    53  ls
-   54  cd .kube/
+   54  cd ..
    55  ls
-   56  cat config 
-   57  cat /etc/kubernetes/admin.conf 
-   58  cd 
-   59  ls
-   60  cd k8s-vmware-Rnd-17Aug2020/
-   61  ls
-   62  cd 02-K8s/
-   63  ls
-   64  history > Day2_History.txt
-   65  kubectl run first-Pod --image=amitvashist7/get-started:part2 --port=80
-   66  kubectl run firstPod --image=amitvashist7/get-started:part2 --port=80
-   67  kubectl create firstPod --image=amitvashist7/get-started:part2 --port=80
-   68  kubectl --help
-   69  kubectl create --help
-   70  kubectl create firstpod --image=amitvashist7/get-started:part2 --port=80
-   71  kubectl run pod --name firstpod --image=amitvashist7/get-started:part2 --port=80
-   72  kubectl run pod firstpod --image=amitvashist7/get-started:part2 --port=80
-   73  kubectl run firstpod --image=amitvashist7/get-started:part2 --port=80
-   74  kubectl run FirstPod --image=amitvashist7/get-started:part2 --port=80
-   75  kubectl run secoundpod --image=amitvashist7/get-started:part2 --port=80
-   76  kubectl get pods 
-   77  kubectl delete pod pod
-   78  kubectl get pods 
-   79  ls
-   80  history > Day2_History.txt 
+   56  history > Day2_History.txt 
