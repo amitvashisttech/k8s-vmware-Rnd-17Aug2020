@@ -54,3 +54,78 @@
    54  cd ..
    55  ls
    56  history > Day2_History.txt 
+   57  ls
+   58  cd ..
+   59  ls
+   60  git add . ; git commit -m "Day2_History.txt"; git push 
+   61  ls
+   62  git pull
+   63  ls
+   64  git pu;; 
+   65  git pull
+   66  ls
+   67  cd 02-K8s/
+   68  git pu;; 
+   69  git pull
+   70  s
+   71  cd 
+   72  ls
+   73  cd k8s-vmware-Rnd-17Aug2020/
+   74  ls
+   75  git pull 
+   76  ls
+   77  cd 02-K8s/
+   78  ls
+   79  cd 04-Deployment/
+   80  ls
+   81  cat README.md 
+   82  ls
+   83  cat helloworld.yml 
+   84  kubectl get pods 
+   85  kubectl delete rc 
+   86  kubectl delete rc helloworld-controller
+   87  kubectl get pods 
+   88  ls
+   89  kubectl create -f helloworld.yml 
+   90  kubectl get deploy
+   91  kubectl get rs
+   92  kubectl get pods
+   93  kubectl scale --replicas=10 deploy helloworld-deployment
+   94  kubectl get pods
+   95  kubectl expose deploy helloworld-deployment --type=NodePort
+   96  kubectl get svc 
+   97  kubectl get pods
+   98  kubectl set image deployment helloworld-deployment k8s-demo=amitvashist7/k8s-tiny-web:2
+   99  kubectl get pods
+  100  watch -n .1 kubectl get pods
+  101  kubectl get rs 
+  102  kubectl set image deployment helloworld-deployment k8s-demo=amitvashist7/k8s-tiny-web:3
+  103  watch -n .1 kubectl get pods
+  104  kubectl rollout status deployment helloworld-deployment 
+  105  kubectl set image deployment helloworld-deployment k8s-demo=amitvashist7/k8s-tiny-web:2
+  106  kubectl rollout status deployment helloworld-deployment 
+  107  kubectl rollout undo deployment helloworld-deployment 
+  108  kubectl rollout status deployment helloworld-deployment 
+  109  kubectl get pods 
+  110  kubectl get rs
+  111  kubectl rollout undo deployment helloworld-deployment 
+  112  kubectl get rs
+  113  kubectl rollout history deployment helloworld-deployment 
+  114  kubectl rollout history deployment helloworld-deployment --resivsion=1
+  115  kubectl rollout history deployment helloworld-deployment --revision=1
+  116  kubectl rollout history deployment helloworld-deployment --revision=5
+  117  kubectl rollout history deployment helloworld-deployment --revision=6
+  118  kubectl rollout history deployment helloworld-deployment 
+  119  kubectl set image deployment helloworld-deployment k8s-demo=amitvashist7/k8s-tiny-web:4 --record=true
+  120  kubectl rollout history deployment helloworld-deployment 
+  121  kubectl rollout undo deployment helloworld-deployment  --to-revision=1
+  122  kubectl rollout history deployment helloworld-deployment 
+  123  kubectl describe deployment helloworld-deployment
+  124  ls
+  125  kubectl delete -f helloworld.yml 
+  126  kubectl get svc 
+  127  kubectl delete svc helloworld-deployment
+  128  ls
+  129  cd ..
+  130  ls
+  131  history > Day2_History.txt 
