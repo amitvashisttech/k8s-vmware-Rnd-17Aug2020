@@ -390,3 +390,93 @@
   390  cd ..
   391  ls
   392  history > Day3_History.txt 
+  393  cd ..
+  394  cd ../; git add . ; git commit -m "Day3_History.txt"; git push 
+  395  lls
+  396  cd - 
+  397  cd ../; git add . ; git commit -m "Day3_History.txt"; git push 
+  398  cd -; git add . ; git commit -m "Day3_History.txt"; git push 
+  399  git pull 
+  400  ls
+  401  cd 02-K8s/
+  402  ls
+  403  cd 08-HealthCheck/
+  404  ls
+  405  cat pod-prob-exec.yaml 
+  406  ls
+  407  cat helloworld-healthcheck.yml 
+  408  kubectl get pods 
+  409  kubectl delete pods --all
+  410  kubectl delete deploy --all
+  411  kubectl get pods 
+  412  ls
+  413  kubectl create -f helloworld-healthcheck.yml
+  414  kubectl get deploy 
+  415  kubectl get pods 
+  416  kubectl describe pod helloworld-deployment-585fb455cb-75b2n
+  417  kubectl get pods 
+  418  kubectl edit deploy helloworld-deployment
+  419  kubectl get pods 
+  420  kubectl get pods -w
+  421  kubectl describe pod helloworld-deployment-6d7d9cf544-c9pb5
+  422  kubectl get pods -w
+  423  kubectl get pods
+  424  kubectl describe pod helloworld-deployment-6d7d9cf544-c9pb5
+  425  kubectl get pods
+  426  kubectl edit deploy helloworld-deployment
+  427  kubectl get pods
+  428  ls
+  429  cat helloworld-healthcheck-readyness.yaml 
+  430  ls
+  431  kubectl delete -f helloworld-healthcheck.yml 
+  432  ls
+  433  kubectl create -f helloworld-healthcheck-readyness.yaml 
+  434  kubectl get pods 
+  435  kubectl describe pod helloworld-deployment-69fd75899f-gt4jx
+  436  kubectl delete -f helloworld-healthcheck-readyness.yaml 
+  437  ls
+  438  cat pod-prob-exec.yaml 
+  439  kubectl create -f pod-prob-exec.yaml 
+  440  kubectl get pods 
+  441  kubectl describe pod liveness-exec
+  442  kubectl get pods 
+  443  kubectl get pods -w
+  444  kubectl describe pod liveness-exec
+  445  ls
+  446  kubectl get pods
+  447  kubectl delete -f pod-prob-exec.yaml 
+  448  ls
+  449  cd ..
+  450  ls
+  451  kubectl get pods 
+  452  ls
+  453  cd ..
+  454  ls
+  455  git pull 
+  456  ls
+  457  cd 02-K8s/
+  458  ls
+  459  cd 09-Secrets/
+  460  ls
+  461  cat helloworld-secrets.yml 
+  462  echo "root" | base64
+  463  echo -n "root" | base64
+  464  echo -n "amitvashist7" | base64
+  465  echo -n "Pass@word1234" | base64
+  466  sed -i "s/cm9vdA==/YW1pdHZhc2hpc3Q3/g" helloworld-secrets.yml 
+  467  sed -i "s/cGFzc3dvcmQ=/UGFzc0B3b3JkMTIzNA==/g" helloworld-secrets.yml 
+  468  ls
+  469  kubectl get secrets 
+  470  kubectl create -f helloworld-secrets.yml 
+  471  cat helloworld-secrets.yml 
+  472  kubectl get secrets 
+  473  ls
+  474  cat helloworld-secrets-volumes.yml 
+  475  kubectl create -f helloworld-secrets-volumes.yml 
+  476  kubectl get pods 
+  477  kubectl describe pod helloworld-deployment-6bb4d96fc8-6bxkb
+  478  kubectl exec -it helloworld-deployment-6bb4d96fc8-6bxkb -- /bin/sh
+  479  ls
+  480  cd ..
+  481  ls
+  482  history > Day3_History.txt 
