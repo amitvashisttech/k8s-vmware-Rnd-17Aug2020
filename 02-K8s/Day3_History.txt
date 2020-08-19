@@ -480,3 +480,38 @@
   480  cd ..
   481  ls
   482  history > Day3_History.txt 
+  483  cd ..
+  484  ls
+  485  docker volume ls 
+  486  ls
+  487  git pull 
+  488  ks
+  489  ls
+  490  cd 02-K8s/
+  491  ls
+  492  cd 10-Wordpress/
+  493  ls
+  494  cat wordpress-secrets.yml 
+  495  cat wordpress-single-deployment-no-volumes.yml 
+  496  vim wordpress-single-deployment-no-volumes.yml
+  497  ls
+  498  cat wordpress-service.yml 
+  499  ls
+  500  cd ..
+  501  ls
+  502  kubectl create -f 10-Wordpress/
+  503  kubectl get deploy
+  504  kubectl delete deploy helloworld-deployment
+  505  kubectl get deploy
+  506  kubectl get pods 
+  507  kubectl describe pod wordpress-deployment-7d4896594c-2tz8v
+  508  kubectl get svc,secrets,deploy,pods
+  509  kubectl get pods 
+  510  kubectl exec -it wordpress-deployment-7d4896594c-2tz8v -c mysql -- mysql -u root -p 
+  511  ls
+  512  kubectl delete -f 10-Wordpress/
+  513  ls
+  514  cd ..
+  515  l
+  516  git pull 
+  517  history > 02-K8s/Day3_History.txt 
