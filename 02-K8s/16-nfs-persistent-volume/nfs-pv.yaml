@@ -10,4 +10,4 @@ spec:
   nfs:
     # FIXME: use the right IP
     path: /exports
-    server: 172.31.7.107
+    server: 172.31.2.77

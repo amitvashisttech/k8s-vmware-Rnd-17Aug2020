@@ -556,3 +556,177 @@
   556  cd ..
   557  ls
   558  history > Day3_History.txt 
+  559  cd -; git add . ; git commit -m "Day3_History.txt"; git push 
+  560  ls
+  561  cd ../../; git add . ; git commit -m "Day3_History.txt"; git push 
+  562  git pull
+  563  ls
+  564  cd 02-K8s/
+  565  ls
+  566  kubectl create -f 14-Metrics-server/
+  567  kubectl delete -f 14-Metrics-server/
+  568  ls
+  569  cd ..
+  570  git pull 
+  571  ls
+  572  cd 02-K8s/
+  573  sl
+  574  ls
+  575  kubectl create -f 14-Metrics-server/
+  576  kubectl get pods 
+  577  kubectl get pods -n kube-system
+  578  kubectl top nodes 
+  579  kubectl top opods 
+  580  kubectl top pods 
+  581  ls
+  582  cd 12-Statefullset/
+  583  ls
+  584  cat helloworld-stateful.yaml 
+  585  kubectl create -f helloworld-stateful.yaml 
+  586  kubectl get pods -w
+  587  kubectl get statefullset
+  588  kubectl get statefull
+  589  kubectl get StatefulSet
+  590  kubectl scale --replicas=10 StatefulSet helloworld-statefull 
+  591  kubectl get pods -w
+  592  kubectl get pods 
+  593  watch -n .1 kubectl get pods 
+  594  kubectl scale --replicas=2 StatefulSet helloworld-statefull 
+  595  watch -n .1 kubectl get pods 
+  596  kubectl scale --replicas=5 StatefulSet helloworld-statefull 
+  597  watch -n .1 kubectl get pods 
+  598  kubectl  run -it busybox --image=busybox:1.28 --restart=Never -- sh 
+  599  ls
+  600  kubectl get pods 
+  601  ls
+  602  kubectl get daemonset -n kube-system
+  603  kubectl describe daemonset kube-proxy -n kube-system
+  604  ls
+  605  kubectl get daemonset -n kube-system
+  606  ls
+  607  cd ..
+  608  ls
+  609  cd 13-DeamonSet/
+  610  ls
+  611  cat helloworld.yml 
+  612  kubectl get daemonset 
+  613  kubectl create -f helloworld.yml 
+  614  kubectl get daemonset 
+  615  ls
+  616  cd ..
+  617  ls
+  618  kubectl top nodes
+  619  kubectl get pods -n kube-system
+  620  kubectl top nodes
+  621  kubectl top pods 
+  622  ls
+  623  kubectl delete -f 12-Statefullset/
+  624  kubectl delete -f 13-DeamonSet/
+  625  ls
+  626  cd 15-Autoscaling/
+  627  ls
+  628  vim hpa-example.yml 
+  629  ls
+  630  kubectl get svc 
+  631  kubectl create hpa-example.yml 
+  632  kubectl create -f hpa-example.yml 
+  633  ls
+  634  cd ..
+  635  cd 15-Autoscaling/
+  636  kubectl create -f hpa-example.yml 
+  637  ls
+  638  vim hpa-example.yml 
+  639  kubectl create -f hpa-example.yml 
+  640  kubectl delete -f hpa-example.yml 
+  641  kubectl create -f hpa-example.yml 
+  642  kubectl get deploy,hpa,svc
+  643  kubectl get pods 
+  644  kubectl get hpa
+  645  ls
+  646  cd ..
+  647  ls
+  648  cat 16-nfs-persistent-volume/
+  649  lls
+  650  ls
+  651  cd 16-nfs-persistent-volume/
+  652  ls
+  653  sl
+  654  ls
+  655  apt-get install nfs-kernel-server -y
+  656  mkdir /exports ; chown nobody:nogroup /exports
+  657  vi /etc/exports 
+  658  systemctl restart nfs-kernel-server
+  659  systemctl status nfs-kernel-server
+  660  showmount -e localhost
+  661  kubectl get nodes 
+  662  kubectl get nodes -o wide
+  663  cd /exports/
+  664  ls
+  665  echo "Hello" > 1.txt
+  666  ls
+  667  cd 
+  668  ls
+  669  cd k8s-vmware-Rnd-17Aug2020/
+  670  ls
+  671  cd 02-K8s/
+  672  ls
+  673  kubectl get pv 
+  674  kubectl get pvc
+  675  ls
+  676  cd 16-nfs-persistent-volume/
+  677  ls
+  678  cat nfs-pv.yaml 
+  679  ip addr 
+  680  ls
+  681  vim nfs-pv.yaml 
+  682  ls
+  683  kubectl create -f nfs-pv.yaml 
+  684  kubectl get pv 
+  685  ls
+  686  cat nfs-pvc.yaml 
+  687  kubectl create -f nfs-pvc.yaml
+  688  kubectl get pvc 
+  689  ls
+  690  cat fs-web-rc.yaml 
+  691  ls
+  692  cat nfs-busybox-rc.yaml 
+  693  kubectl create -f  nfs-busybox-rc.yaml 
+  694  kubectl get pods 
+  695  ls
+  696  kubectl describe pod nfs-busybox-mqxwh
+  697  ls
+  698  kubectl get pods -o wide 
+  699  cd /exports/
+  700  ls
+  701  tail -f index.html 
+  702  cat index.html 
+  703  c d- 
+  704  ls
+  705  cd - 
+  706  ls
+  707  cat nfs-busybox-rc.yaml
+  708  ls
+  709  kubectl get deploy
+  710  ls
+  711  cat nfs-busybox-rc.yaml 
+  712  kubectl delete -f nfs-busybox-rc.yaml 
+  713  vi nfs-busybox-rc.yaml 
+  714  kubectl create  -f nfs-busybox-rc.yaml 
+  715  ls
+  716  cd 
+  717  kubectl  get pods 
+  718  tail -f /exports/index.html 
+  719  ls
+  720  cd - 
+  721  kubectl delete -f nfs-busybox-rc.yaml 
+  722  cat  /exports/index.html 
+  723  cd 
+  724  kubectl get hpa
+  725  kubectl get pods 
+  726  kubectl get svc 
+  727  ls
+  728  cd k8s-vmware-Rnd-17Aug2020/
+  729  ls
+  730  cd 02-K8s/
+  731  ls
+  732  history > Day3_History.txt 
