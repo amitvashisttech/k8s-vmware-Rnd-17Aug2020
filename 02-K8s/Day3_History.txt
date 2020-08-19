@@ -515,3 +515,44 @@
   515  l
   516  git pull 
   517  history > 02-K8s/Day3_History.txt 
+  518  cd -; git add . ; git commit -m "Day3_History.txt"; git push 
+  519  ls
+  520  cd 11-ConfigMap/
+  521  ls
+  522  cat reverseproxy.conf 
+  523  cat nginx.yml 
+  524  cat nginx-service.yml 
+  525  kubectl get configmap
+  526  kubectl create configmap nginx-config --from-file=reverseproxy.conf
+  527  kubectl get configmap
+  528  kubectl describe configmap nginx-config
+  529  ls
+  530  vim nginx.yml 
+  531  kubectl create -f nginx.yml 
+  532  kubectl create -f nginx-service.yml 
+  533  kubectl get pods 
+  534  kubectl describe pods helloworld-nginx
+  535  kubectl get svc 
+  536  kubectl get pods -o wide 
+  537  curl ip-172-31-5-80:30461
+  538  kubectl create secret nginx-config --from-file=reverseproxy.conf
+  539  ls
+  540* kubectl create secret gen nginx-config --help
+  541  kubectl create secret genric nginx-config --from-file=reverseproxy.conf
+  542  kubectl create secret genric nginx-config --help 
+  543  kubectl create secret generic --help
+  544  kubectl create secret generic nginx-secret --from-file=re--from-file=reverseproxy.conf
+  545  kubectl describe secret nginx-secret
+  546  kubectl edit secret nginx-secret
+  547  kubectl describe configmap nginx-config
+  548  kubectl get pods 
+  549  kubectl exec -it helloworld-nginx -c nginx -- bash 
+  550  kubectl edit configmap nginx-config
+  551  kubectl describe configmap nginx-config
+  552  curl ip-172-31-5-80:30461
+  553  kubectl exec -it helloworld-nginx -c nginx -- bash 
+  554  curl ip-172-31-5-80:30461
+  555  ls
+  556  cd ..
+  557  ls
+  558  history > Day3_History.txt 
