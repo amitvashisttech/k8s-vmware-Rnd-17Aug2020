@@ -278,3 +278,115 @@
   278  cd ..
   279  ls
   280  history > Day3_History.txt 
+  281  cd ../; git add . ; git commit -m "Day3_History.txt"; git push 
+  282  ls
+  283  cd 02-K8s/
+  284  ls
+  285  cd 05-App-with-Service-2/
+  286  ls
+  287  cat helloworld-pythonwebapp.yaml 
+  288  ls
+  289  cat helloworld.yml 
+  290  cat helloworld-pythonwebapp.yaml 
+  291  cat helloworld-service.yml 
+  292  cat pythonweb-service.yaml 
+  293  ls
+  294  cd ..
+  295  ls
+  296  cd ..
+  297  git config --list
+  298  ls
+  299  cd 02-K8s/
+  300  ls
+  301  kubectl create -f 05-App-with-Service-2/
+  302  kubectl get svc 
+  303  ls
+  304  kubectl delete -f 05-App-with-Service-2/
+  305  ls
+  306  cd ..
+  307  ls
+  308  git pull
+  309  ls
+  310  cd 02-K8s/
+  311  ls
+  312  cd 06-Dashboard/
+  313  ls
+  314  cat README.md 
+  315  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-rc7/aio/deploy/recommended.yaml
+  316  kubectl get ns 
+  317  kubectl get pods,deploy,svc -n kubernetes-dashboard
+  318  ls
+  319  cat sample-user.yaml 
+  320  kubectl get pods,deploy,svc,sa -n kubernetes-dashboard
+  321  kubectl create -f sample-user.yaml 
+  322  kubectl get pods,deploy,svc,sa -n kubernetes-dashboard
+  323  kubectl edit svc  -n kubernetes-dashboard
+  324  kubectl get pods,deploy,svc,sa -n kubernetes-dashboard
+  325  kubectl edit svc kubernetes-dashboard  -n kubernetes-dashboard
+  326  kubectl get pods,deploy,svc,sa -n kubernetes-dashboard
+  327  kubectl get pods -o wide -n kubernetes-dashboard
+  328  curl ip-172-31-8-109:31401
+  329  curl https://ip-172-31-8-109:31401
+  330  kubectl get nodes 
+  331  kubectl get secrets -n kubernetes-dashboard
+  332  kubectl describe secret admin-user-1-token-kz5z5 -n kubernetes-dashboard
+  333  kubectl get pods 
+  334  kubectl get ns
+  335  kubectl get nodes 
+  336  ls
+  337  cd ..
+  338  ls
+  339  cat 04-Deployment/helloworld.yml 
+  340  ls
+  341  cd 06-Dashboard/
+  342  ls
+  343  cat README.md 
+  344  ls
+  345  cd ..
+  346  ls
+  347  git pulll 
+  348  cd ..; git pull
+  349  kubectl get nodes --show-labels
+  350  git pull 
+  351  ls
+  352  cd 02-K8s/
+  353  ls
+  354  cd 07-Labels/
+  355  ls
+  356  cat helloworld-nodeselector-1.yaml 
+  357  kubectl create -f helloworld-nodeselector-1.yaml 
+  358  kubectl delete deploy --all 
+  359  kubectl create -f helloworld-nodeselector-1.yaml 
+  360  kubectl get pods 
+  361  kubectl delete my-webapp tomcat-app
+  362  kubectl delete pod  my-webapp tomcat-app
+  363  kubectl get pods 
+  364  kubectl describe pods helloworld-deployment-57986b947d-jhvvx
+  365  ls
+  366  cat helloworld-nodeselector-2.yaml 
+  367  kubectl create -f helloworld-nodeselector-2.yaml 
+  368  kubectl get pods 
+  369  cat helloworld-nodeselector-2.yaml 
+  370  kubectl get nodes --show-labels
+  371  kubectl label nodes ip-172-31-5-80 hardware=virtual
+  372  kubectl get nodes --show-labels
+  373  kubectl get pods 
+  374  kubectl get pods -o wide 
+  375  kubectl scale --replicas=5 deploy helloworld-deployment
+  376  kubectl get pods -o wide 
+  377  kubectl get nodes --show-labels
+  378  kubectl label nodes ip-172-31-8-109 hardware=virtual
+  379  kubectl get pods -o wide 
+  380  kubectl delete pod helloworld-deployment-57986b947d-8plqq
+  381  kubectl get pods -o wide 
+  382  kubectl scale --replicas=10 deploy helloworld-deployment
+  383  kubectl get pods -o wide 
+  384  cat helloworld-nodeselector-2.yaml 
+  385  kubectl label nodes ip-172-31-8-109 env=prod
+  386  kubectl get pods -o wide 
+  387  ls
+  388  cat README.md 
+  389  ls
+  390  cd ..
+  391  ls
+  392  history > Day3_History.txt 
